@@ -1,0 +1,338 @@
+:root {
+    --primary-color: #3b5998;
+    --secondary-color: #1d2129;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #fff;
+    color: var(--secondary-color);
+    line-height: 1.34;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 12px;
+}
+.container {
+    margin: 0 auto;
+    width: 75%;
+}
+/* Header Style */
+header {
+    height: 80px;
+    background: var(--primary-color);
+    color: #fff;
+}
+.header {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-areas: 
+        'logo form'
+}
+.logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    height: 80px;
+}
+.logo > a {
+    font-size: 40px;
+    font-weight: bold;
+    color: #fff;
+    text-decoration: none;
+}
+.form {
+    margin-top: 10px;
+    grid-area: form;
+    display: grid;
+    height: 80px;
+    grid-template-columns: 40% 40% 20%;
+    grid-template-areas: 
+        'email password login'
+}
+.form input[type="text"] {
+    width: 90%;
+    margin: 5px 0;
+    border: none;
+    height: 20px;
+}
+.email {
+    grid-area: email;
+}
+.password {
+    grid-area: password;
+}
+.password > p {
+    color: #9cb4d8;
+}
+.password > p:hover {
+    cursor: pointer;
+}
+.login {
+    width: 85%;
+    grid-area: login;
+    height: 20px;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    background: #4267b2;
+    border: 0.5px solid #29487d;
+    display: flex;
+    margin-top: calc(1rem + 5px);
+}
+.login:hover {
+    cursor: pointer;
+}
+/* Body Style */
+#body {
+    background: linear-gradient(white, #D3D8E8);
+}
+.body {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    grid-template-areas: 
+        'slogan register'
+}
+.slogan {
+    grid-area: slogan;
+    color: #0e385f;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 29px;
+    margin-top: 40px;
+    width: 450px;
+    word-spacing: -1;
+}
+.register {
+    grid-area: register;
+    margin: 0;
+}
+.register h1 {
+    font-size: 36px;
+    color: #333;
+    font-weight: 600;
+    padding: 20px 0 8px 0;
+}
+.register p {
+    font-size: 19px;
+    padding: 0 0 20px 0;
+}
+.register input[type="text"] {
+    border-radius: 5px;
+    border: 1px solid #bdc7d8;
+    margin: 0;
+    font-size: 18px;
+    padding: 8px 10px;
+    margin-bottom: 10px; 
+}
+.register .name-infor {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 10px;
+}
+.email-regis {
+    display: grid;
+    width: calc(100% + 10px);
+}
+.pass-regis {
+    display: grid;
+    width: calc(100% + 10px);
+    margin-bottom: 10px;
+}
+select {
+    font-size: 13px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid #bdc7d8;
+}
+.date {
+    float: left;
+    margin-right: 10px;
+}
+.reason {
+    font-size: 11px;
+}
+.reason a {
+    color: #365899;
+    cursor: pointer;
+    max-width: 150px;
+    text-decoration: none;
+}
+.gender{
+    font-size: 18px;
+    color: #1d2129;
+    line-height: 18px;
+    padding: 0 10px 0 3px;
+    margin: 15px 0;
+}
+.term {
+    font-size: 11px !important;
+    color: #777;
+    width: 80%;
+}
+.term span {
+    color: #365899;
+}
+.term span:hover {
+    cursor: pointer;
+    border-bottom: 0.5px solid #365899;
+}
+.body button {
+    font-size: 19px;
+    margin: 10px 0;
+    font-weight: bold;  
+    min-width: 194px;
+    text-align: center;
+    padding: 7px 20px;
+    background: linear-gradient(#67ae55, #578843);
+    background-color: #69a74e;
+    box-shadow: inset 0 1px 1px #a4e388;
+    border: 1px solid #3b6e22;
+    color: #fff;
+    border-radius: 5px;
+}
+.create {
+    color: #666;
+    font-weight: bold;
+    margin-top: 10px;
+    padding-top: 15px;
+    font-size: 13px !important;
+    width: 90%;
+}
+.create span {
+    color: #365899;
+}
+.create span:hover {
+    cursor: pointer;
+}
+/* Footer Style */
+.footer span {
+    color: #365899;
+    padding: 5px 5px 5px 0;
+    line-height: 1.64;
+}
+.footer span:hover {
+    cursor: pointer;
+}
+.lg {
+    margin-top: 3px;
+}
+.lg input[type="button"] {
+    padding: 0 10px;
+    text-align: center;
+    border: 1px solid #ccd0d5;
+    font-size: 20px;
+}
+.lg input[type="button"]:hover {
+    cursor: pointer;
+}
+.hr {
+    border-bottom: 1px solid #dddfe2;
+    height: 4px;
+    margin-bottom: 8px;
+}
+.infor span {
+    padding-right: 12px;
+}
+.copy-right {
+    margin: 20px 0 25px 0;
+    font-size: 11px;
+    color: #737373;
+}
+/* Responsive */
+@media only screen and (max-width: 600px) {
+    header {
+        height: 300px;
+        text-align: center;
+    }
+    .container {
+        width: 100%;
+    }
+    .header {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+            'logo' 
+            'form'
+    }
+    .logo {
+        display: block;
+        margin-top: 20px;
+        text-align: center;
+    }
+    .form {
+        margin-top: 10px;;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+            'email' 'password' 'login'
+    }
+    .login {
+        width: 150px;
+        display: block;
+        margin: 10px auto;
+    }
+
+    .body {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+            'slogan' 'register'
+    }
+    .body img {
+        padding: 0;
+        margin: 0 auto;
+        max-height: 100%;
+        max-width: 100%;
+        display: block;
+        padding-top: 20px;
+    }
+    .slogan {
+        text-align: center;
+        width: 100%;
+    }
+    .slogan h3 {
+        width: 80% !important;
+        margin: 0 auto;
+    }
+    .register {
+        width: 100% !important;
+        text-align: center;
+    }
+    .register input[type="text"] {
+        width: 80%;
+        margin: 0 auto; 
+    }
+    .register .name-infor {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .email-regis {
+        margin: 10px 0;
+        width: 100%;
+    }
+    .pass-regis {
+        width: 100%;
+    }
+    select {
+        font-size: 13px;
+        height: 30px;
+        padding: 5px;
+        border: 1px solid #bdc7d8;
+    }
+    .date {
+        width: 100%;
+    }
+    .term {
+        margin: 0 auto;
+        width: 90%;
+    }
+    .create {
+        margin: 0 auto;
+        width: 90%;
+    }
+
+    .footer {
+        text-align: center;
+        width: 95%; 
+        margin: 0 auto;
+    }
+  }
